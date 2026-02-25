@@ -1,0 +1,23 @@
+{
+    "Name": "ISRUC-Sleep",
+    "BIDSVersion": "1.7.0",
+    "DatasetType": "derivative",
+    "Authors": [
+        "Pierre Guetschel"
+    ],
+    "ReferencesAndLinks": [
+        "https://doi.org/10.1016/j.cmpb.2015.10.013"
+    ],
+    "GeneratedBy": [
+        {
+            "Name": "MNE-BIDS",
+            "Version": "0.17.0",
+            "CodeURL": "https://mne.tools/mne-bids/"
+        }
+    ],
+    "SourceDatasets": [
+        {
+            "URL": "https://sleeptight.isr.uc.pt"
+        }
+    ]
+}
