@@ -2,9 +2,14 @@
     "Name": "ISRUC-Sleep",
     "BIDSVersion": "1.7.0",
     "DatasetType": "derivative",
+    "License": "n/a",
     "Authors": [
-        "Pierre Guetschel"
+        "Sirvan Khalighi",
+        "Teresa Sousa",
+        "Jose Moutinho Santos",
+        "Urbano Nunes"
     ],
+    "Acknowledgements": "Pierre Guetschel updated the data to BIDS format.",
     "ReferencesAndLinks": [
         "https://doi.org/10.1016/j.cmpb.2015.10.013"
     ],

@@ -386,6 +386,10 @@ def main(
     bids_root = Path(bids_root).expanduser()
     bids_root.mkdir(parents=True, exist_ok=True)
 
+    if finalize_only:
+        _finalize_dataset(bids_root, overwrite=overwrite)
+        return
+
     print(f"\n=== ISRUC-Sleep BIDS Conversion ===")
     print(f"Source: {source_root}")
     print(f"BIDS root: {bids_root}")
@@ -400,10 +404,6 @@ def main(
     print(f"  Found {len(records)} recordings\n")
     for rec_path, stage_files, bids_path, label, sid_num in records:
         bids_path = bids_path.update(root=bids_root)
-
-    if finalize_only:
-        _finalize_dataset(bids_root, overwrite=overwrite)
-        return
 
     # sanity check duplicates
     bids_paths = [bp.fpath for _, _, bp, _, _ in records]
@@ -574,8 +574,15 @@ def _finalize_dataset(
         source_datasets=[
             {"URL": "https://sleeptight.isr.uc.pt"},
         ],
-        authors=["Pierre Guetschel"],
+        authors=[
+            "Sirvan Khalighi",
+            "Teresa Sousa",
+            "Jose Moutinho Santos",
+            "Urbano Nunes",
+        ],
+        acknowledgements="Pierre Guetschel updated the data to BIDS format.",
         overwrite=overwrite,
+        data_license="n/a",  # No license specified in original dataset
     )
 
     # README will be written after generating the report (to include it)
