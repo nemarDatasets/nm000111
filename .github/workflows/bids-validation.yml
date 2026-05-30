@@ -1,0 +1,47 @@
+name: BIDS Validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  dispatch:
+    name: Dispatch central BIDS validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions: {}
+    steps:
+      - name: Mint App token scoped to .github
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.NEMAR_APP_ID }}
+          private-key: ${{ secrets.NEMAR_APP_PRIVATE_KEY }}
+          owner: nemarDatasets
+          # The dispatch target is the .github repo; the token needs
+          # actions:write on .github. The central workflow mints a
+          # separate per-dataset token internally for the checkout step.
+          repositories: .github
+
+      - name: Dispatch run-bids-validation
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          set -euo pipefail
+          DATASET_ID="${{ github.event.repository.name }}"
+          # On pull_request events the head is the PR's head; on push
+          # events it's the pushed commit. Fall back so both shapes work.
+          HEAD_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          REF="${{ github.event.pull_request.head.ref || github.ref_name }}"
+          PR_NUMBER="${{ github.event.pull_request.number || '' }}"
+          echo "Dispatching run-bids-validation for $DATASET_ID @ $HEAD_SHA (ref=$REF, PR=$PR_NUMBER)"
+          gh api "repos/nemarDatasets/.github/dispatches" \
+            -f event_type=run-bids-validation \
+            -f "client_payload[dataset_id]=$DATASET_ID" \
+            -f "client_payload[ref]=$REF" \
+            -f "client_payload[head_sha]=$HEAD_SHA" \
+            -f "client_payload[pr_number]=$PR_NUMBER" \
+            -f "client_payload[validator_version]=2.4.1"

@@ -1,0 +1,56 @@
+name: PR Merge Handler
+
+on:
+  pull_request_target:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  dispatch-release:
+    name: Dispatch central release creation
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions: {}
+    steps:
+      - name: Mint App token scoped to .github
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.NEMAR_APP_ID }}
+          private-key: ${{ secrets.NEMAR_APP_PRIVATE_KEY }}
+          owner: nemarDatasets
+          repositories: .github
+
+      - name: Dispatch run-pr-merge
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          set -euo pipefail
+          DATASET_ID="${{ github.event.repository.name }}"
+          PR_NUMBER="${{ github.event.pull_request.number }}"
+          echo "Dispatching run-pr-merge for $DATASET_ID (PR #$PR_NUMBER)"
+          gh api "repos/nemarDatasets/.github/dispatches" \
+            -f event_type=run-pr-merge \
+            -f "client_payload[dataset_id]=$DATASET_ID" \
+            -f "client_payload[pr_number]=$PR_NUMBER"
+
+  cleanup-staging:
+    name: Cleanup Staging (runs on merge or close)
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions: {}
+    steps:
+      - name: Remove staging data for this PR/branch
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          DATASET_ID: ${{ github.event.repository.name }}
+          BRANCH: ${{ github.event.pull_request.head.ref }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          # Clean up branch-based staging
+          aws s3 rm --recursive "s3://nemar/staging/${DATASET_ID}/${BRANCH}/" 2>/dev/null || true
+          # Clean up legacy PR-number-based staging
+          aws s3 rm --recursive "s3://nemar/staging/pr-${PR_NUMBER}/" 2>/dev/null || true
