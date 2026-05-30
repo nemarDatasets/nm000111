@@ -1,0 +1,77 @@
+{
+  "version": "2.0",
+  "pipeline_stage": "validated",
+  "authors": {
+    "Sirvan Khalighi": {
+      "orcid": "0000-0002-5563-1446"
+    },
+    "Teresa Sousa": {},
+    "Jose Moutinho Santos": {},
+    "Urbano Nunes": {}
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.1016/j.cmpb.2015.10.013",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/nm000111",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=nm000111",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    }
+  ],
+  "title": "ISRUC-Sleep",
+  "license": "n/a",
+  "dataset_type": "derivative",
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "eeg"
+  ],
+  "resource_type_specific": "EEG Dataset",
+  "sizes": [
+    "37.3 GB (891 files)"
+  ],
+  "formats": [
+    ".edf",
+    ".json",
+    ".md",
+    ".py",
+    ".tsv"
+  ],
+  "description": "ISRUC-Sleep is a comprehensive polysomnographic dataset comprising overnight recordings from 118 participants with manual sleep stage annotations. The dataset includes EEG, EOG, EMG, and respiratory signals scored by expert raters into wake and sleep stages (N1, N2, N3, REM) following AASM/R&K guidelines, supporting research in automatic sleep staging and sleep-disordered breathing detection.",
+  "methods_description": "Participants underwent overnight polysomnographic recording in a clinical environment using standard PSG montage. EEG signals were sampled at 200 Hz. Sleep stages were manually scored by two independent expert scorers in 30-second epochs following AASM/R&K guidelines. The dataset includes 126 scans across 2 recording sessions with recording durations ranging from approximately 3 to 9 hours per session.",
+  "keywords": [
+    {
+      "term": "Polysomnography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D017286"
+    },
+    {
+      "term": "Sleep Stages",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D012894"
+    },
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "sleep-disordered breathing"
+    },
+    {
+      "term": "automatic sleep staging"
+    },
+    {
+      "term": "EOG"
+    },
+    {
+      "term": "EMG"
+    }
+  ],
+  "source_hash": "a5bc80c54b46dc5dc6cde3fbc4eed2a79a7ebb36bae129569828e243ff19bc81"
+}
