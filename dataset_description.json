@@ -1,5 +1,5 @@
 {
-    "Name": "ISRUC-Sleep",
+    "Name": "ISRUC-Sleep: A comprehensive public dataset for sleep researchers.",
     "BIDSVersion": "1.7.0",
     "DatasetType": "derivative",
     "License": "n/a",
