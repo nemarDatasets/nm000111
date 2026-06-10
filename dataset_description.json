@@ -1,28 +1,29 @@
 {
-    "Name": "ISRUC-Sleep: A comprehensive public dataset for sleep researchers.",
-    "BIDSVersion": "1.7.0",
-    "DatasetType": "derivative",
-    "License": "n/a",
-    "Authors": [
-        "Sirvan Khalighi",
-        "Teresa Sousa",
-        "Jose Moutinho Santos",
-        "Urbano Nunes"
-    ],
-    "Acknowledgements": "Pierre Guetschel updated the data to BIDS format.",
-    "ReferencesAndLinks": [
-        "https://doi.org/10.1016/j.cmpb.2015.10.013"
-    ],
-    "GeneratedBy": [
-        {
-            "Name": "MNE-BIDS",
-            "Version": "0.17.0",
-            "CodeURL": "https://mne.tools/mne-bids/"
-        }
-    ],
-    "SourceDatasets": [
-        {
-            "URL": "https://sleeptight.isr.uc.pt"
-        }
-    ]
+  "Name": "ISRUC-Sleep: A comprehensive public dataset for sleep researchers.",
+  "BIDSVersion": "1.7.0",
+  "DatasetType": "raw",
+  "Version": "1.0.1",
+  "License": "n/a",
+  "Authors": [
+    "Sirvan Khalighi",
+    "Teresa Sousa",
+    "Jose Moutinho Santos",
+    "Urbano Nunes"
+  ],
+  "Acknowledgements": "Pierre Guetschel updated the data to BIDS format.",
+  "ReferencesAndLinks": [
+    "https://doi.org/10.1016/j.cmpb.2015.10.013"
+  ],
+  "GeneratedBy": [
+    {
+      "Name": "MNE-BIDS",
+      "Version": "0.17.0",
+      "CodeURL": "https://mne.tools/mne-bids/"
+    }
+  ],
+  "SourceDatasets": [
+    {
+      "URL": "https://sleeptight.isr.uc.pt"
+    }
+  ]
 }

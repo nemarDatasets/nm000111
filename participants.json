@@ -1,0 +1,111 @@
+{
+    "participant_id": {
+        "Description": "Unique BIDS participant identifier. Encodes the ISRUC subgroup (I, II, III) and the original subject number."
+    },
+    "index": {
+        "Description": "Zero-based index of the participant within its own subgroup; the counter restarts at 0 for each subgroup (I: 0-99, II: 0-7, III: 0-9)."
+    },
+    "Subject": {
+        "Description": "Subject identifier exactly as listed in the source Details spreadsheet. For subgroups I and III this is the plain subject number; for subgroup II it retains the source recording suffix (for example, '1_Rec.1')."
+    },
+    "age_det": {
+        "Description": "Age in years exactly as reported in the source ISRUC Details spreadsheet, kept verbatim as free text. '?' denotes an age that is unknown/unreported in the source; see the BIDS-standard numeric 'age' column for the derived numeric value."
+    },
+    "Sex": {
+        "Description": "Sex as reported in the source ISRUC Details spreadsheet.",
+        "Levels": {
+            "M": "male",
+            "F": "female"
+        }
+    },
+    "Diagnosis": {
+        "Description": "Primary clinical diagnosis of the participant, transcribed from the source Details spreadsheet (free text, original language preserved)."
+    },
+    "Other problems": {
+        "Description": "Additional clinical problems or comorbidities reported in the source Details spreadsheet (free text)."
+    },
+    "Epoches": {
+        "Description": "Number of 30-second epochs scored for the recording."
+    },
+    "W%": {
+        "Description": "Percentage of epochs scored as Wake (W) by the first expert scorer.",
+        "Units": "%"
+    },
+    "N1%": {
+        "Description": "Percentage of epochs scored as stage N1 by the first expert scorer.",
+        "Units": "%"
+    },
+    "N2%": {
+        "Description": "Percentage of epochs scored as stage N2 by the first expert scorer.",
+        "Units": "%"
+    },
+    "N3%": {
+        "Description": "Percentage of epochs scored as stage N3 by the first expert scorer.",
+        "Units": "%"
+    },
+    "REM%": {
+        "Description": "Percentage of epochs scored as REM by the first expert scorer.",
+        "Units": "%"
+    },
+    "Date of recording": {
+        "Description": "Date of the PSG recording as reported in the source Details spreadsheet (date format not standardized in the source)."
+    },
+    "W%.1": {
+        "Description": "Percentage of epochs scored as Wake (W) by the second expert scorer.",
+        "Units": "%"
+    },
+    "N1%.1": {
+        "Description": "Percentage of epochs scored as stage N1 by the second expert scorer.",
+        "Units": "%"
+    },
+    "N2%.1": {
+        "Description": "Percentage of epochs scored as stage N2 by the second expert scorer.",
+        "Units": "%"
+    },
+    "N3%.1": {
+        "Description": "Percentage of epochs scored as stage N3 by the second expert scorer.",
+        "Units": "%"
+    },
+    "REM%.1": {
+        "Description": "Percentage of epochs scored as REM by the second expert scorer.",
+        "Units": "%"
+    },
+    "Medication": {
+        "Description": "Medication taken by the participant, transcribed from the source Details spreadsheet (free text)."
+    },
+    "EEG alterations": {
+        "Description": "Notable EEG alterations reported in the source Details spreadsheet (free text)."
+    },
+    "Cohen’s kappa": {
+        "Description": "Cohen's kappa inter-scorer agreement between the two expert scorers, as reported in the source Details spreadsheet. Reported only for subgroup II; empty for subgroups I and III, where the source does not provide it."
+    },
+    "age": {
+        "Description": "Age of the participant in whole years, derived by MNE-BIDS from the recording date and a birthday reconstructed as (recording date - reported age). Because of this round-trip it can be one year lower than the reported 'age_det'. 'n/a' where the source age is unknown.",
+        "Units": "year"
+    },
+    "sex": {
+        "Description": "Sex of the participant.",
+        "Levels": {
+            "M": "male",
+            "F": "female",
+            "n/a": "not available"
+        }
+    },
+    "hand": {
+        "Description": "Handedness of the participant. 'n/a' as handedness was not reported in the source.",
+        "Levels": {
+            "L": "left",
+            "R": "right",
+            "A": "ambidextrous",
+            "n/a": "not available"
+        }
+    },
+    "weight": {
+        "Description": "Body weight of the participant. 'n/a' as weight was not reported in the source.",
+        "Units": "kg"
+    },
+    "height": {
+        "Description": "Body height of the participant. 'n/a' as height was not reported in the source.",
+        "Units": "m"
+    }
+}
