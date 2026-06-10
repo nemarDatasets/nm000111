@@ -84,7 +84,7 @@ sub-I082	81	82	43	F	RONCOPATIA		882.0	18.37	12.59	31.97	23.24	13.83	24/2/2012	19
 sub-I083	82	83	77	F	SAOS	Depression	925.0	24.54	10.05	37.84	12.43	15.14	24/2/2012	25.51	4.76	48.11	6.49	15.14	Trazodona			77.0	F	n/a	n/a	n/a
 sub-I084	83	84	65	F	SAOS		963.0	12.56	5.82	30.32	35.83	15.47	27/2/2012	13.08	4.47	32.71	34.37	15.37	Mirtazapina; BZD	Rapid activity; cardiac artifact		65.0	F	n/a	n/a	n/a
 sub-I085	84	85	56	F	S. PERNAS INQUIETAS	PLMS	896.0	14.51	9.49	39.96	21.88	14.17	27/2/2012	13.62	5.13	51.34	12.61	17.3	BZD			56.0	F	n/a	n/a	n/a
-sub-I086	85	86	?	M	RONCOPATIA		964.0	18.67	14.21	40.46	13.28	13.38	27/02/2012	19.81	15.87	41.08	8.4	14.83					M	n/a	n/a	n/a
+sub-I086	85	86	?	M	RONCOPATIA		964.0	18.67	14.21	40.46	13.28	13.38	27/02/2012	19.81	15.87	41.08	8.4	14.83				n/a	M	n/a	n/a	n/a
 sub-I087	86	87	32	F	SAOS		926.0	19.44	6.91	37.15	19.44	17.06	2012-01-03 00:00:00	18.79	10.69	34.99	17.39	18.14				32.0	F	n/a	n/a	n/a
 sub-I088	87	88	68	M	RONCOPATIA		1002.0	26.15	12.28	35.33	25.45	0.8	2012-02-03 00:00:00	25.05	10.28	51.0	12.48	1.2	SSRI; Mirtazapina; BZD	Muscle activity in W; rapid activity in EEG except in REM		68.0	M	n/a	n/a	n/a
 sub-I089	88	89	56	F	SAOS		1036.0	40.25	8.4	25.97	16.6	8.78	2012-05-03 00:00:00	40.54	5.02	20.08	23.75	10.62				56.0	F	n/a	n/a	n/a
@@ -93,7 +93,7 @@ sub-I091	90	91	52	F	SAOS		990.0	14.44	12.53	35.56	17.88	19.6	2012-05-03 00:00:00
 sub-I092	91	92	22	M	EPILEPSIA		877.0	18.93	6.16	42.76	23.83	8.32	2012-08-03 00:00:00	19.27	4.45	47.66	20.07	8.55		Hypersyncrony in N3; paroxystic activity in W, N1, N2		21.0	M	n/a	n/a	n/a
 sub-I093	92	93	38	F	D. Afectiva		870.0	6.44	17.47	42.76	18.16	15.17	2012-09-03 00:00:00	7.7	12.53	49.31	14.71	15.75				37.0	F	n/a	n/a	n/a
 sub-I094	93	94	45	F	SAOS	Depression	846.0	25.41	8.87	36.41	15.25	14.07	2012-09-03 00:00:00	24.94	8.87	35.58	14.89	15.72		Rapid actitivy in EEG; alpha-delta pattern		44.0	F	n/a	n/a	n/a
-sub-I095	94	95	?	M	Parasomnia 		865.0	17.57	20.35	28.32	15.26	18.5	2012-12-03 00:00:00	18.96	16.18	34.68	12.49	17.69	BZD; Gabapentina	Alpha-delta pattern			M	n/a	n/a	n/a
+sub-I095	94	95	?	M	Parasomnia 		865.0	17.57	20.35	28.32	15.26	18.5	2012-12-03 00:00:00	18.96	16.18	34.68	12.49	17.69	BZD; Gabapentina	Alpha-delta pattern		n/a	M	n/a	n/a	n/a
 sub-I096	95	96	64	M	SAOS		858.0	17.25	6.76	36.95	23.19	15.85	16/3/2012	18.07	6.29	32.87	27.62	15.15				64.0	M	n/a	n/a	n/a
 sub-I097	96	97	66	F	SAOS		912.0	21.82	10.09	23.25	28.62	16.23	16/3/2012	19.96	8.77	27.41	25.22	18.64	BZD	Rapid activity in EEG; slower activity in W		65.0	F	n/a	n/a	n/a
 sub-I098	97	98	39	M	RONCOPATIA		899.0	15.8	16.35	37.04	15.68	15.13	23/3/2012 	23.36	12.79	40.27	11.46	12.12				38.0	M	n/a	n/a	n/a

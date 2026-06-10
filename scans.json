@@ -1,0 +1,8 @@
+{
+    "filename": {
+        "Description": "Relative path (from the subject/session directory) to the data file the scan metadata refers to."
+    },
+    "acq_time": {
+        "Description": "Acquisition date/time of the recording (ISO 8601). Derived from the 'Date of recording' field in the source ISRUC Details spreadsheet (time set to midnight UTC); 2020-01-01 is used as a placeholder when the source date is unavailable."
+    }
+}
