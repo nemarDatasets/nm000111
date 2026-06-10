@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "ISRUC-Sleep: A comprehensive public dataset for sleep researchers.",
-  "description": "ISRUC-Sleep is a comprehensive polysomnographic dataset comprising overnight recordings from 118 participants with manual sleep stage annotations. The dataset includes EEG, EOG, EMG, and respiratory signals scored by expert raters into wake and sleep stages (N1, N2, N3, REM) following AASM/R&K guidelines. It supports research in automatic sleep staging algorithms and sleep-disordered breathing characterization.",
-  "methods_description": "Participants underwent overnight polysomnographic recording in a clinical environment using standard PSG montage. EEG signals were sampled at 200 Hz. Sleep stages were manually scored by two independent expert scorers in 30-second epochs following AASM/R&K guidelines. The dataset includes 126 scans across 118 participants with 2 recording sessions.",
+  "description": "ISRUC-Sleep is a comprehensive polysomnographic dataset comprising overnight recordings from 118 participants with manual sleep stage annotations. The dataset includes EEG, EOG, EMG, and respiratory signals scored by expert raters into wake and sleep stages (N1, N2, N3, REM) in 30-second epochs following AASM/R&K guidelines. This resource supports research in automatic sleep staging algorithms and sleep-disordered breathing characterization.",
+  "methods_description": "Participants underwent overnight polysomnographic recording in a clinical environment using standard PSG montage. EEG signals were sampled at 200 Hz. Sleep stages were manually scored by two independent expert scorers for each 30-second epoch according to AASM/R&K guidelines. The dataset includes 126 scans across 2 recording sessions with recording durations ranging from approximately 3 to 9 hours.",
   "license": "n/a",
   "dataset_type": "raw",
   "authors": {
@@ -29,13 +29,16 @@
       "term": "EEG"
     },
     {
-      "term": "sleep scoring"
-    },
-    {
       "term": "sleep-disordered breathing"
     },
     {
-      "term": "automatic sleep staging"
+      "term": "automated sleep staging"
+    },
+    {
+      "term": "EOG"
+    },
+    {
+      "term": "EMG"
     }
   ],
   "related_identifiers": [
@@ -71,5 +74,5 @@
     ".tsv",
     ".yml"
   ],
-  "source_hash": "41c943e1bbb6cb25bde15bc49ddd7eb2a481b994a617ccd80f98949f002163f8"
+  "source_hash": "acd95b402453ae8990f43d1861ad4caa8968c82baa50937745812d418b2224e6"
 }
