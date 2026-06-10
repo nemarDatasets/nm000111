@@ -56,6 +56,11 @@
       "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=nm000111",
       "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.21105/joss.01896",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
     }
   ],
   "resource_type_general": "Dataset",
