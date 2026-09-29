@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "ISRUC-Sleep: A comprehensive public dataset for sleep researchers.",
-  "description": "ISRUC-Sleep is a comprehensive polysomnographic dataset comprising overnight recordings from 118 participants with manual sleep stage annotations. The dataset includes EEG, EOG, EMG, and respiratory signals scored by expert raters into wake and sleep stages (N1, N2, N3, REM) in 30-second epochs following AASM/R&K guidelines. This resource supports research in automatic sleep staging algorithms and sleep-disordered breathing characterization.",
-  "methods_description": "Participants underwent overnight polysomnographic recording in a clinical environment using standard PSG montage. EEG signals were sampled at 200 Hz. Sleep stages were manually scored by two independent expert scorers for each 30-second epoch according to AASM/R&K guidelines. The dataset includes 126 scans across 2 recording sessions with recording durations ranging from approximately 3 to 9 hours.",
+  "description": "ISRUC-Sleep is a public collection of overnight polysomnographic recordings with manual sleep stage annotations, organized into three subgroups that include healthy subjects, patients with sleep disorders, and multiple-night recordings. Signals include EEG, EOG, EMG and respiratory channels. Each recording was scored in 30-second epochs by two expert scorers. The dataset supports research on automatic sleep staging and sleep-disordered breathing, and has been converted to BIDS.",
+  "methods_description": "Participants slept overnight in a clinical environment with a standard PSG montage. Two independent human scorers labeled each 30-second epoch as W, N1, N2, N3 or REM following AASM/R&K guidelines. Original .rec files were exposed as EDF without modification, and the annotations were added as events with 30 s duration.",
   "license": "n/a",
   "dataset_type": "raw",
   "authors": {
@@ -29,10 +29,10 @@
       "term": "EEG"
     },
     {
-      "term": "sleep-disordered breathing"
+      "term": "sleep staging"
     },
     {
-      "term": "automated sleep staging"
+      "term": "sleep-disordered breathing"
     },
     {
       "term": "EOG"
@@ -45,7 +45,7 @@
     {
       "identifier": "10.1016/j.cmpb.2015.10.013",
       "identifier_type": "DOI",
-      "relation_type": "References"
+      "relation_type": "IsDescribedBy"
     },
     {
       "identifier": "https://github.com/nemarDatasets/nm000111",
@@ -53,13 +53,13 @@
       "relation_type": "IsDescribedBy"
     },
     {
-      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=nm000111",
-      "identifier_type": "URL",
-      "relation_type": "IsDescribedBy"
-    },
-    {
       "identifier": "10.21105/joss.01896",
       "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000111",
+      "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
     }
   ],
@@ -69,7 +69,7 @@
     "eeg"
   ],
   "sizes": [
-    "37.3 GB (891 files)"
+    "34.74 GB (891 files)"
   ],
   "formats": [
     ".edf",
